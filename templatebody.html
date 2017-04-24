@@ -1,0 +1,92 @@
+<style type="text/css">@import url('https://fonts.googleapis.com/css?family=Roboto');
+  *{font-family: 'Roboto', sans-serif;
+  font-size:12px;}
+  img {float:left; margin-right:30px;}
+  h1 {color:#1FBAA9;
+    font-size:24px;}
+  h2 {font-size:18px;}
+  h3 {font-size:18px;
+    font-style:bold;}
+  h4 {font-size:12px;}
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:solid 1px;
+    border-bottom: solid 1px;
+  }
+
+  table th {
+    padding: 5px 20px;
+    background: #F0F0F0
+    border-bottom: 1px solid #C5C5C5;
+    white-space: nowrap;
+    font-weight: normal;
+  }
+
+  .tableProductsheader{
+    font-size: 10px;
+    text-align: center;
+    padding: 5px 5px;
+    background-color: #F0F0F0;
+    border-bottom: 1px solid #C5C5C5;
+    white-space: nowrap;
+    font-weight: bold;
+    page-break-inside: avoid;
+  }
+
+  /* Product Family*/
+  .tableProductscol0{text-align:left;font-size: 18px;font-weight: bold;border-top:none;color:#1FBAA9; padding: 15px 0px 5px 0px}
+
+  /* Table Headers */
+  .tableProductscol1{text-align:left; font-size: 12px;border-bottom: 1px solid #C5C5C5;}
+  .tableProductscol2{text-align:right;font-size: 12px;border-bottom: 1px solid #C5C5C5;}
+  .tableProductscol3{text-align:right;font-size: 12px;border-bottom: 1px solid #C5C5C5;}
+  .tableProductscol4{text-align:right;font-size: 12px;border-bottom: 1px solid #C5C5C5;}
+
+  /* Subtotal footer */
+  .tableProductsfooter{font-size: 14px; border:solid #C1CED9 1px; background-color:#F0F0F0; text-align:right;}
+  .tableProductsfooter::before{
+    float: left;
+    content: "Subtotal";
+  }
+</style>
+<div>
+<table border="0" cellpadding="0" cellspacing="0" style="width: 900px;">
+	<tbody>
+		<tr>
+			<td style="width: 100px;"><img alt="" height="70" src="/servlet/servlet.ImageServer?id=0157F000000HChLQAW&amp;oid=00D7F0000002ywXUAQ" /></td>
+			<td style="width: 794px;">
+			<h1>{{{!Quote.Account.name}}}<br />
+			<span style="font-size:18px;"><span style="color:#000000;">Statement of Work - {{{!Quote.name}}}</span></span></h1>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<h3>Project Summary</h3>
+
+<h4>{{{!Quote.project_summary__c}}}</h4>
+
+<h3><br />
+<br />
+Solution</h3>
+
+<h4>{{{!Quote.project_solution__c}}}</h4>
+<!--{{!
+<lineitemsSOQL><class>tableProducts</class>
+<listname>quotelineitem</listname>
+<column>Product2.family</column>
+<column>Product2.description</column>
+<column format-number="#,###">quantity</column>
+<column prefix="$ " format-number="#,###.##">unitprice</column>
+<column prefix="$ " format-number="#,###.##">totalprice</column>
+<where>quoteid='{!quote.id}'</where>
+<groupbyheader position="after-group">DESCRIPTION,QTY,PRICE,TOTAL</groupbyheader>
+<groupby type="onetable">Product2.family</groupby>
+<groupbysum position="footer" format-number="#,###.##" prefix="$ ">totalprice</groupbysum>
+<orderby>Product2.family, sortorder, createddate desc</orderby>
+</lineitemsSOQL>
+}}-->
