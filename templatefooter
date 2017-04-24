@@ -1,0 +1,22 @@
+<style type="text/css">.page-number:before {
+content: counter(page);
+}
+.page-count:before {
+content: counter(pages);
+}
+  div.footer {
+    color: #383838;
+    font-size: 10px;
+  }
+</style>
+<div class="footer">
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
+	<tbody>
+		<tr>
+			<td style="width: 80%; text-align: right;">Commercial in Confidence<br />
+			Page <span class="page-number"> of <span class="page-count"></span></span></td>
+			<td style="width: 20%;"><img alt="" height="35" src="/servlet/servlet.ImageServer?id=0157F000000HChQQAW&amp;oid=00D7F0000002ywXUAQ" style="float:right" /></td>
+		</tr>
+	</tbody>
+</table>
+</div>

@@ -1,8 +1,6 @@
 <style type="text/css">@import url('https://fonts.googleapis.com/css?family=Roboto');
   * {font-family: 'Roboto', sans-serif;
-   color: 383838;
-    font-size:12px;}
-  img {vertical-align: centre;}
+   color: 383838;}
   h1 {color:#1FBAA9;
     font-size:24px;
     font-weight: normal;
@@ -12,7 +10,8 @@
     margin: 0px;}
   h3 {font-size:14px;
     font-style: normal;}
-  h4 {font-size:12px;}
+  body {font-size:12px;}
+
 
   table {
     width: 100%;
@@ -31,7 +30,7 @@
   }
 
   .tableProductsheader{
-    font-size: 10px;
+    font-size: 12px;
     text-align: center;
     padding: 5px 5px;
     background-color: #F0F0F0;
@@ -41,28 +40,33 @@
     page-break-inside: avoid;
   }
 
+  div.header {
+    padding: 5px 0px;
+    border-bottom: solid 1px #C5C5C5;
+  }
+
   /* Product Family*/
-  .tableProductscol0{text-align:left;font-size: 14px;font-weight: normal;border-top:none;color:#1FBAA9; padding: 15px 0px 5px 0px}
+  .tableProductscol0{text-align:left;font-size: 14px;font-weight: bold;border-top:none;color:#1FBAA9; padding: 15px 0px 5px 5px}
 
   /* Table Headers */
-  .tableProductscol1{text-align:left; font-size: 12px;border-bottom: 1px solid #C5C5C5;}
-  .tableProductscol2{text-align:right;font-size: 12px;border-bottom: 1px solid #C5C5C5;}
-  .tableProductscol3{text-align:right;font-size: 12px;border-bottom: 1px solid #C5C5C5;}
-  .tableProductscol4{text-align:right;font-size: 12px;border-bottom: 1px solid #C5C5C5;}
+  .tableProductscol1{text-align:left; font-size: 10px;border-bottom: 1px solid #C5C5C5; padding: 7px 5px;}
+  .tableProductscol2{text-align:right;font-size: 10px;border-bottom: 1px solid #C5C5C5; padding: 7px 5px;}
+  .tableProductscol3{text-align:right;font-size: 10px;border-bottom: 1px solid #C5C5C5; padding: 7px 5px;}
+  .tableProductscol4{text-align:right;font-size: 10px;border-bottom: 1px solid #C5C5C5; padding: 7px 5px;}
 
   /* Subtotal footer */
-  .tableProductsfooter{font-size: 14px; border:solid #C1CED9 1px; background-color:#F0F0F0; text-align:right;}
+  .tableProductsfooter{font-size: 12px; font-weight: bold; border-bottom: 1px solid #C5C5C5; background-color:#F0F0F0; text-align:right; padding: 8px 5px;}
   .tableProductsfooter::before{
     float: left;
     content: "Total cost";
   }
 </style>
-<div>
-<table border="0" cellpadding="0" cellspacing="0" style="width: 900px;">
+<div class="header">
+<table border="0" cellpadding="0" cellspacing="0" style="width: 100%">
 	<tbody>
 		<tr>
-			<td style="width: 100px;"><img alt="" height="60" src="/servlet/servlet.ImageServer?id=0157F000000HChLQAW&amp;oid=00D7F0000002ywXUAQ" /></td>
-			<td style="width: 794px;">
+			<td style="width: 10%;"><img alt="" height="60" src="/servlet/servlet.ImageServer?id=0157F000000HChLQAW&amp;oid=00D7F0000002ywXUAQ" /></td>
+			<td style="width: 90%;">
 			<h1>{{{!Quote.Account.name}}}</h1>
 
 			<h2>Statement of Work - {{{!Quote.name}}}</h2>
