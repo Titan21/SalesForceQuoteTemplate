@@ -1,7 +1,8 @@
 <style type="text/css">@import url('https://fonts.googleapis.com/css?family=Roboto');
-  *{font-family: 'Roboto', sans-serif;
+  * {font-family: 'Roboto', sans-serif;
   font-size:12px;}
-  img {float:left; margin-right:30px;}
+  img {float:left;
+    margin-right:30px;}
   h1 {color:#1FBAA9;
     font-size:24px;}
   h2 {font-size:18px;}
@@ -67,15 +68,10 @@
 </div>
 
 <h3>Project Summary</h3>
+{{{!Quote.project_summary__c}}}
 
-<h4>{{{!Quote.project_summary__c}}}</h4>
-
-<h3><br />
-<br />
-Solution</h3>
-
-<h4>{{{!Quote.project_solution__c}}}</h4>
-<!--{{!
+<h3>Solution</h3>
+{{{!Quote.project_solution__c}}} <!-- Database magic --> <!--{{!
 <lineitemsSOQL><class>tableProducts</class>
 <listname>quotelineitem</listname>
 <column>Product2.family</column>
