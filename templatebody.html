@@ -46,7 +46,7 @@
   }
 
   /* Product Family*/
-  .tableProductscol0{text-align:left;font-size: 14px;font-weight: bold;border-top:none;color:#1FBAA9; padding: 15px 0px 5px 5px}
+  .tableProductscol0{text-align:left;font-size: 14px;font-weight: bold;border-bottom: solid 1px #C5C5C5;color:#1FBAA9; padding: 15px 0px 5px 5px}
 
   /* Table Headers */
   .tableProductscol1{text-align:left; font-size: 10px;border-bottom: 1px solid #C5C5C5; padding: 7px 5px;}
@@ -66,11 +66,12 @@
 	<tbody>
 		<tr>
 			<td style="width: 10%;"><img alt="" height="60" src="/servlet/servlet.ImageServer?id=0157F000000HChLQAW&amp;oid=00D7F0000002ywXUAQ" /></td>
-			<td style="width: 90%;">
+			<td style="width: 70%;">
 			<h1>{{{!Quote.Account.name}}}</h1>
 
 			<h2>Statement of Work - {{{!Quote.name}}}</h2>
 			</td>
+			<td align="right" style="vertical-align: top; width:30%;">{{!Quote.createddate d MMMMM, yyyy}}</td>
 		</tr>
 	</tbody>
 </table>
