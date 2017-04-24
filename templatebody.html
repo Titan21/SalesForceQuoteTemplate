@@ -1,13 +1,17 @@
 <style type="text/css">@import url('https://fonts.googleapis.com/css?family=Roboto');
   * {font-family: 'Roboto', sans-serif;
-  font-size:12px;}
-  img {float:left;
-    margin-right:30px;}
+   color: 383838;
+    font-size:12px;}
+  img {vertical-align: centre;}
   h1 {color:#1FBAA9;
-    font-size:24px;}
-  h2 {font-size:18px;}
-  h3 {font-size:18px;
-    font-style:bold;}
+    font-size:24px;
+    font-weight: normal;
+    margin: 0px;}
+  h2 {font-size:16px;
+  	font-weight: normal;
+    margin: 0px;}
+  h3 {font-size:14px;
+    font-style: normal;}
   h4 {font-size:12px;}
 
   table {
@@ -38,7 +42,7 @@
   }
 
   /* Product Family*/
-  .tableProductscol0{text-align:left;font-size: 18px;font-weight: bold;border-top:none;color:#1FBAA9; padding: 15px 0px 5px 0px}
+  .tableProductscol0{text-align:left;font-size: 14px;font-weight: normal;border-top:none;color:#1FBAA9; padding: 15px 0px 5px 0px}
 
   /* Table Headers */
   .tableProductscol1{text-align:left; font-size: 12px;border-bottom: 1px solid #C5C5C5;}
@@ -50,17 +54,18 @@
   .tableProductsfooter{font-size: 14px; border:solid #C1CED9 1px; background-color:#F0F0F0; text-align:right;}
   .tableProductsfooter::before{
     float: left;
-    content: "Subtotal";
+    content: "Total cost";
   }
 </style>
 <div>
 <table border="0" cellpadding="0" cellspacing="0" style="width: 900px;">
 	<tbody>
 		<tr>
-			<td style="width: 100px;"><img alt="" height="70" src="/servlet/servlet.ImageServer?id=0157F000000HChLQAW&amp;oid=00D7F0000002ywXUAQ" /></td>
+			<td style="width: 100px;"><img alt="" height="60" src="/servlet/servlet.ImageServer?id=0157F000000HChLQAW&amp;oid=00D7F0000002ywXUAQ" /></td>
 			<td style="width: 794px;">
-			<h1>{{{!Quote.Account.name}}}<br />
-			<span style="font-size:18px;"><span style="color:#000000;">Statement of Work - {{{!Quote.name}}}</span></span></h1>
+			<h1>{{{!Quote.Account.name}}}</h1>
+
+			<h2>Statement of Work - {{{!Quote.name}}}</h2>
 			</td>
 		</tr>
 	</tbody>
@@ -80,7 +85,7 @@
 <column prefix="$ " format-number="#,###.##">unitprice</column>
 <column prefix="$ " format-number="#,###.##">totalprice</column>
 <where>quoteid='{!quote.id}'</where>
-<groupbyheader position="after-group">DESCRIPTION,QTY,PRICE,TOTAL</groupbyheader>
+<groupbyheader position="after-group">Description,Qty,Unit,Cost</groupbyheader>
 <groupby type="onetable">Product2.family</groupby>
 <groupbysum position="footer" format-number="#,###.##" prefix="$ ">totalprice</groupbysum>
 <orderby>Product2.family, sortorder, createddate desc</orderby>
